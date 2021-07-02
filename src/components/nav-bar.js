@@ -2,6 +2,13 @@ import React from "react";
 
 import MainNav from "./main-nav";
 import AuthNav from "./auth-nav";
+// var style = {
+//   background-image : url(https://brandslogos.com/wp-content/uploads/images/large/deutsche-bank-logo.png);,
+//   width: 2 rem;
+//   height: 2.25rem;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// };
 // import "./app.css";
 const NavBar = () => {
   return (

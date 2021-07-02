@@ -1,18 +1,16 @@
-// "use strict";
-import React, { Component } from "react";
 import { ChartOptions } from "chart.js";
+import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 // import { getData } from "./Data";
 
-// Object.defineProperty(exports, "__esModule", { value: true });
-// exports.LineChart = void 0;
-var Data_1 = require("./Data");
-var style = {
+var X = [1, 2, 3, 4];
+var Y = [1, 2, 3, 4];
+const style = {
   maxWidth: "85vw",
   margin: "0 auto",
   marginBottom: "50px",
 };
-var options = {
+const options = {
   scales: {
     yAxes: [
       {
@@ -26,11 +24,11 @@ var options = {
     legend: false,
   },
 };
-var generateChartData = function () {
-  var chartXY = Data_1.getData();
-  var dataY = chartXY.Y[0];
-  var dataX = chartXY.X;
-  var data = {
+function generateChartData() {
+  // let chartXY = getData();
+  let dataY = Y;
+  let dataX = X;
+  const data = {
     labels: dataX,
     datasets: [
       {
@@ -43,8 +41,8 @@ var generateChartData = function () {
     ],
   };
   return data;
-};
-class LineChart extends Component {
+}
+export class LineChart extends Component {
   render() {
     return (
       <div style={style}>
@@ -53,11 +51,4 @@ class LineChart extends Component {
     );
   }
 }
-export default LineChart;
-// exports.LineChart = function () {
-//     render()
-//   return (
-//     <div style={style}>
-//       <Line type="line" data={generateChartData()} options={options} />
-//     </div>
-//   );
+// export  LineChart;
