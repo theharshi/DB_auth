@@ -1,11 +1,11 @@
 import React from "react";
-import { LineChart } from "./LineChart.jsx";
-import { Form } from "./Form";
+import { LineChart } from "./LineChart.tsx";
+import { Form } from "./Form.tsx";
 
 const HomeContent = () => (
   <div>
     <Form></Form>
-    <LineChart></LineChart>
+    {/* <LineChart></LineChart> */}
   </div>
 );
 
