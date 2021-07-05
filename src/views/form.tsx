@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import { useState } from "react";
 import { PredictionVar, predictionVarMap } from "../interfaces/enums";
 import { ApiRequest, ChartDataInterafce } from "../interfaces/interfaces";
-import { getData, setDateFormat } from "./Data";
-import { LineChart } from "./LineChart";
+import { getData, setDateFormat } from "../components/Data";
+import { LineChart } from "../components/LineChart";
 import { CSVLink, CSVDownload } from "react-csv";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -177,7 +177,9 @@ export const Form: React.FunctionComponent = () => {
         isAuthenticated ? (
           <LineChart chartData={chartData} />
         ) : (
-          <h1>Login to continue</h1>
+          <div className="alert alert-danger" role="alert">
+            Please Login to continue
+          </div>
         )
       ) : null}
     </div>

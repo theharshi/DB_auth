@@ -1,8 +1,9 @@
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
-
+import "../css/home.css";
 const MainNav = () => (
   <div className="navbar-nav mr-auto">
+    {/* <div></div.>> */}
     <NavLink
       to="/"
       exact
@@ -10,6 +11,15 @@ const MainNav = () => (
       activeClassName="router-link-exact-active"
     >
       Home
+    </NavLink>
+
+    <NavLink
+      to="/predictor"
+      exact
+      className="nav-link"
+      activeClassName="router-link-exact-active"
+    >
+      Predictor
     </NavLink>
     <NavLink
       to="/profile"
@@ -20,12 +30,12 @@ const MainNav = () => (
       Profile
     </NavLink>
     <NavLink
-      to="/external-api"
+      to="/about"
       exact
       className="nav-link"
       activeClassName="router-link-exact-active"
     >
-      External API
+      About
     </NavLink>
   </div>
 );

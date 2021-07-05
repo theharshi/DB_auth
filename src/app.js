@@ -3,7 +3,11 @@ import { Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import { NavBar, Footer, Loading } from "./components";
-import { Home, Profile, ExternalApi } from "./views";
+import Home from "./views/home.js";
+import Profile from "./views/profile";
+import about from "./views/about";
+import { Form } from "./views/form.tsx";
+import Predictor from "./components/predictor";
 import ProtectedRoute from "./auth/protected-route";
 
 import "./app.css";
@@ -22,7 +26,8 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
           <ProtectedRoute path="/profile" component={Profile} />
-          <ProtectedRoute path="/external-api" component={ExternalApi} />
+          <ProtectedRoute path="/predictor" component={Form} />
+          <ProtectedRoute path="/about" component={about} />
         </Switch>
       </div>
       <Footer />
